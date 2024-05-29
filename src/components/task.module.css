@@ -1,0 +1,48 @@
+.task {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  padding: 1rem;
+}
+
+.task + .task {
+  margin-top: 0.75rem;
+}
+
+.task span {
+  font-size: 0.875rem;
+  flex: 1;
+}
+
+.task span[data-checked="true"] {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.task button {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 1.5rem;
+  width: 1.5rem;
+
+  cursor: pointer;
+}
+
+.task button:hover {
+  background-color: var(--gray-400);
+}
+
+.task button:hover svg {
+  fill: var(--danger);
+}

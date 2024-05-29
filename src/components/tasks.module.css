@@ -1,0 +1,56 @@
+.wrapper {
+  margin-top: 4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info strong {
+  color: var(--blue);
+  font-size: 0.875rem;
+}
+
+.info strong[data-color="secondary"] {
+  color: var(--purple);
+}
+
+.info span {
+  background-color: var(--gray-400);
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  padding: 2px 8px;
+}
+
+.tasks {
+  margin-top: 1.5rem;
+}
+
+.empty {
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+  color: var(--gray-300);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 5rem 0;
+}
+
+.empty img {
+  height: 3.5rem;
+  width: 3.5rem;
+}

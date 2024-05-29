@@ -1,0 +1,21 @@
+.newTaskForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+
+.newTaskForm input {
+  flex: 1;
+}
+
+.newTaskForm button[type="submit"] {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .newTaskForm button[type="submit"] {
+    flex: 0;
+  }
+}
