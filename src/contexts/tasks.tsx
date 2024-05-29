@@ -1,4 +1,9 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext } from "react";
+
+import { usePersistedState } from "../hooks/use-persisted-state";
+import { storageConfig } from "../config/storage";
+
+const { TASKS_KEY } = storageConfig;
 
 export interface Task {
   id: string;
@@ -27,7 +32,7 @@ export function useTasks() {
 }
 
 export function TasksProvider({ children }: TasksProviderProps) {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = usePersistedState<Task[]>(TASKS_KEY, []);
 
   const tasksCount = tasks.length;
   const completedTasksCount = tasks.filter((task) => task.completed).length;
